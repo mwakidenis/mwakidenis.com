@@ -8,10 +8,9 @@ const nextConfig = {
     appDir: false, // Keep using pages router
   },
   swcMinify: false,
-  // Cloudflare Pages optimization
-  output: process.env.CF_PAGES ? 'standalone' : undefined,
+  // Cloudflare Pages uses serverless rendering (not static export)
   images: {
-    unoptimized: process.env.CF_PAGES ? true : false,
+    unoptimized: true, // Required for Cloudflare Pages
   }
 }
 
