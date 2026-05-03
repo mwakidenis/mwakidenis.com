@@ -12,7 +12,6 @@
     "cross-env": "^7.0.3"
   },
   "dependencies": {
-    "@next/swc-win32-x64-msvc": "13.4.3",
     "date-fns": "^2.30.0",
     "formik": "^2.4.2",
     "gray-matter": "^4.0.3",
