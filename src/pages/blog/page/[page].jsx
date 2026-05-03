@@ -62,7 +62,7 @@ export default Blog;
 export async function getStaticPaths() {
     return {
         paths: Array.from({ length: 5 }).map((_, i) => `/blog/page/${i + 2}`),
-        fallback: 'blocking',
+    fallback: false,
     }
 }
 
@@ -92,7 +92,6 @@ export async function getStaticProps( { params } ) {
         totalPosts: total,
         currentPage: page,
         categories: categoriesData
-      },
-      revalidate: 60 * 60 * 24, // <--- ISR cache: once a day
+      }
     }
 }
