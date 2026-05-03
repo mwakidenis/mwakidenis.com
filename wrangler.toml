@@ -1,0 +1,19 @@
+name = "mwakidenis-nextjs"
+main = "dist/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "mwakidenis-nextjs-prod"
+routes = [
+  { pattern = "mwakidenis.com/*", zone_name = "mwakidenis.com" }
+]
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.{js,jsx,ts,tsx}"]
+
+[build.upload]
+format = "modules"
+dir = ".next/standalone"

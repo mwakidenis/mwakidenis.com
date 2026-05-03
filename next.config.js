@@ -6,8 +6,13 @@ const nextConfig = {
   pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
   experimental: {
     appDir: false, // Keep using pages router
+  },
+  swcMinify: false,
+  // Cloudflare Pages optimization
+  output: process.env.CF_PAGES ? 'standalone' : undefined,
+  images: {
+    unoptimized: process.env.CF_PAGES ? true : false,
   }
-  , swcMinify: false
 }
 
 module.exports = nextConfig
