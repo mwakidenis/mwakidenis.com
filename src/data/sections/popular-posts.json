@@ -1,0 +1,12 @@
+{
+    "title": "Popular Publications:",
+    "featured": [
+        "5-steps-to-create-marketing-plan-4",
+        "5-steps-to-create-marketing-plan"
+    ],
+    "button": {
+        "link": "/blog/code",
+        "label": "View all"
+    },
+    "numOfItems": 2
+}

@@ -1,0 +1,42 @@
+{
+    "title": "mwakidenis <br/>Goodman",
+    "subtitle": "Hello! My name is",
+    "text": "Passionately Creating Design Wonders: <br/>Unleashing Boundless Creativity",
+    "button": {
+        "link": "/services",
+        "label": "More about me"
+    },
+    "image": {
+        "url": "/img/faces/large/1.png",
+        "alt": "Portrait"
+    },
+    "bottom": {
+        "title": "Designing a Better World Today",
+        "button": {
+            "link": "/projects",
+            "label": "View portfolio"
+        },
+        "social": [
+            {
+                "icon": "fab fa-behance",
+                "link": "https://behance.com",
+                "title": "behance"
+            },
+            {
+                "icon": "fab fa-dribbble",
+                "link": "https://dribbble.com",
+                "title": "dribbble"
+            },
+            {
+                "icon": "fab fa-twitter",
+                "link": "https://twitter.com",
+                "title": "twitter"
+            },
+            {
+                "icon": "fab fa-github",
+                "link": "https://github.com",
+                "title": "github"
+            }
+        ]
+    }
+}

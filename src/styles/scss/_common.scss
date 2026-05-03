@@ -1,0 +1,903 @@
+/* -------------------------------------------
+
+main
+
+------------------------------------------- */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font-1;
+    font-size: $text;
+    font-weight: 300;
+    color: $dt-50;
+    line-height: 150%;
+    overscroll-behavior: none;
+
+    @media screen and (max-width: 768px) {
+        font-size: $text - 1px;
+    }
+}
+
+*::selection {
+    color: inherit;
+    background-color: transparent;
+}
+
+.mil-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.container {
+    pointer-events: all;
+}
+
+.mil-relative {
+    position: relative;
+}
+
+.mil-o-hidden {
+    overflow: hidden;
+}
+
+.mil-flex {
+    display: flex;
+}
+
+.mil-vert-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.mil-mobile-hidden {
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* -------------------------------------------
+
+typography
+
+------------------------------------------- */
+h1,
+.mil-h1,
+h2,
+.mil-h12,
+h3,
+.mil-h3,
+h4,
+.mil-h4,
+h5,
+.mil-h5,
+h6,
+.mil-h6 {
+    font-family: $font-1;
+    color: $dark;
+    font-weight: 500;
+    line-height: 120%;
+
+    @media screen and (max-width: 768px) {
+        & br {
+            display: none;
+        }
+    }
+}
+
+h1,
+.mil-h1 {
+    font-size: $h1;
+
+    @media screen and (max-width: 1400px) {
+        font-size: $h1 - 12px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: $h1 - 14px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $h1 - 28px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $h1 - 52px;
+    }
+}
+
+h2,
+.mil-h2 {
+    font-size: $h2;
+    line-height: 120%;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $h2 - 12px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $h2 - 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $h2 - 32px;
+    }
+}
+
+h3,
+.mil-h3 {
+    font-size: $h3;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $h3 - 3px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $h3 - 6px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $h3 - 12px;
+    }
+}
+
+h4,
+.mil-h4 {
+    font-size: $h4;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $h4 - 2px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $h4 - 4px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $h4 - 6px;
+    }
+}
+
+h5,
+.mil-h5 {
+    font-size: $h5;
+    line-height: 150%;
+
+    @media screen and (max-width: 768px) {
+        font-size: $h5 - 2px;
+    }
+}
+
+h6,
+.mil-h6 {
+    font-size: $h6;
+    line-height: 150%;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $h6 - 1px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $h6 - 2px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $h6 + 3px;
+    }
+}
+
+.mil-no-wrap {
+    white-space: nowrap;
+}
+
+blockquote {
+    padding: 60px;
+    background-color: $dt-5;
+    font-size: $text + 2px;
+    color: $dark;
+    font-style: italic;
+    border-left: solid 4px $accent;
+
+    @media screen and (max-width: 768px) {
+        padding: 30px;
+        font-size: $text;
+    }
+}
+
+.mil-text-sm {
+    font-size: $text - 1px;
+}
+
+.mil-text-lg {
+    font-size: $text + 2px;
+    line-height: 170%;
+}
+
+.mil-text-xl {
+    font-size: $text + 6px;
+    line-height: 180%;
+
+    @media screen and (max-width: 768px) {
+        font-size: $text + 4px;
+    }
+}
+
+.mil-upper {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.mil-bold {
+    font-weight: 500;
+}
+
+.mil-thin {
+    font-weight: 100;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mil-complex-title {
+    line-height: normal;
+}
+
+.mil-accent {
+    color: $accent;
+}
+
+.mil-light {
+    color: $light !important;
+
+    & a {
+        color: $light !important;
+    }
+}
+
+.mil-muted {
+    color: $lt-90;
+}
+
+.mil-dark {
+    color: $dark;
+}
+
+.mil-light-soft {
+    color: $lt-40;
+}
+
+.mil-dark-soft {
+    color: $dt-50;
+}
+
+.mil-marker {
+    background-color: $accent;
+    padding: 0 5px;
+}
+
+.mil-center {
+    text-align: center;
+}
+
+.mil-left {
+    text-align: left;
+}
+
+.mil-right {
+    text-align: right;
+}
+
+.mil-sm-center {
+    @media screen and (max-width: 576px) {
+        text-align: center;
+    }
+}
+
+.mil-suptitle {
+    position: relative;
+    display: block;
+    margin-bottom: 60px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: calc(100% + 30px);
+        top: 10px;
+        width: 600px;
+        height: 1px;
+        background-color: $light;
+        opacity: .2;
+    }
+
+    &.mil-suptitle-right {
+        text-align: right;
+
+        &:before {
+            left: calc(100% + 30px);
+        }
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    &.mil-suptitle-dark {
+        &:before {
+            background-color: $dark;
+            opacity: .1;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 60px;
+    }
+}
+
+.mil-divider {
+    width: 100%;
+    height: 1px;
+    background-color: $lt-10;
+}
+
+.mil-img-frame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 140%;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* -------------------------------------------
+
+link
+
+------------------------------------------- */
+.mil-link {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+
+    & svg {
+        margin-left: 15px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background-color: $lt-10;
+        transition: $t-md;
+
+        & path {
+            fill: $light;
+        }
+    }
+
+    &.mil-accent {
+        & svg {
+            background-color: $lt-10;
+            transition: $t-md;
+
+            & path {
+                fill: $accent;
+            }
+        }
+    }
+
+    &.mil-dark {
+        & svg {
+            background-color: $dt-10;
+            transition: $t-md;
+
+            & path {
+                fill: $dark;
+            }
+        }
+    }
+
+    &:hover {
+        & svg {
+            transform: scale(1.15);
+        }
+    }
+
+    &.mil-down-arrow {
+        & svg {
+            transform: rotate(90deg);
+        }
+
+        &:hover {
+            & svg {
+                transform: scale(1.15) rotate(90deg);
+            }
+        }
+    }
+
+    &.mil-icon-left {
+        display: flex;
+        flex-direction: row-reverse;
+
+        & svg {
+            margin-left: 0;
+            margin-right: 15px;
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            & svg {
+                transform: scale(1.15) rotate(180deg);
+            }
+        }
+    }
+}
+
+/* -------------------------------------------
+
+button
+
+------------------------------------------- */
+.mil-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    background-color: $accent;
+    color: $dark;
+    border-radius: 70px;
+    padding: 0 15px 0 50px;
+    height: 70px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: $t-md;
+
+    & span {
+        white-space: nowrap;
+    }
+
+    & svg {
+        margin-left: 30px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background-color: $dark;
+        transition: $t-md;
+
+        & path {
+            fill: $accent;
+        }
+    }
+
+    &.mil-icon-button {
+        padding: 15px;
+
+        & svg {
+            margin-left: 0;
+        }
+    }
+
+    &.mil-icon-button-sm {
+        padding: 0;
+        height: 40px;
+
+        & svg {
+            margin-left: 0;
+            background-color: $accent;
+
+            & path {
+                fill: $dark;
+            }
+        }
+    }
+
+    &:hover {
+        transform: scale(1.015);
+        filter: brightness(110%);
+
+        & svg {
+            transform: scale(1.15);
+        }
+    }
+
+    &.mil-arrow-down {
+        & svg {
+            transform: rotate(90deg);
+        }
+
+        &:hover {
+            transform: scale(1.015);
+            filter: brightness(110%);
+
+            & svg {
+                transform: scale(1.15) rotate(90deg);
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        height: 60px;
+        padding: 0 10px 0 40px;
+
+        & svg {
+            margin-left: 25px;
+        }
+    }
+}
+
+/* -------------------------------------------
+
+form
+
+------------------------------------------- */
+input,
+textarea {
+    position: relative;
+    height: 70px;
+    padding: 0 30px;
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: $font-1;
+    color: $dark;
+    border: none;
+    border-bottom: solid 1px $dt-20;
+    margin-bottom: 30px;
+
+    &:focus {
+        outline: inherit;
+    }
+
+    &::placeholder {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        color: $dt-50;
+    }
+}
+
+textarea {
+    padding: 15px 30px;
+    height: 300px;
+}
+
+/* -------------------------------------------
+
+breadcrumbs
+
+------------------------------------------- */
+
+.mil-breadcrumbs {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: calc(100% + 30px);
+        top: 10px;
+        width: 100vw;
+        height: 1px;
+        background-color: $dt-10;
+    }
+
+    & li {
+        list-style-type: none;
+
+        &:after {
+            content: '/';
+            margin: 0 15px;
+            color: $dark;
+        }
+
+        & a {
+            color: $dark;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            font-size: 12px;
+            white-space: nowrap;
+            transition: $t-sm;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+            cursor: not-allowed;
+
+            & a {
+                opacity: .4;
+                pointer-events: none;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &.mil-light {
+        &:before {
+            background-color: $lt-10;
+        }
+
+        & li {
+            &:after {
+                color: $lt-90;
+            }
+
+            & a {
+                &:hover {
+                    color: $accent !important;
+                }
+            }
+        }
+    }
+
+    &.mil-center {
+        justify-content: center;
+    }
+}
+
+
+/* -------------------------------------------
+
+backgrounds
+
+------------------------------------------- */
+.mil-dark-bg {
+    position: relative;
+    
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 2;
+        backdrop-filter: invert(100%);
+    }
+
+    & .mi-invert-fix {
+        height: 100%;
+        position: relative;
+        pointer-events: none;
+        z-index: 3;
+
+        & .container {
+            pointer-events: all;
+        }
+    }
+}
+
+.mil-soft-bg {
+    background-color: $gs-5;
+}
+
+/* -------------------------------------------
+
+spaces
+
+------------------------------------------- */
+.mil-mr-30 {
+    margin-right: 30px;
+}
+
+.mil-mb-5 {
+    margin-bottom: 5px;
+}
+
+.mil-mb-10 {
+    margin-bottom: 10px;
+}
+
+.mil-mb-15 {
+    margin-bottom: 15px;
+}
+
+.mil-mb-20 {
+    margin-bottom: 15px;
+}
+
+.mil-mb-30 {
+    margin-bottom: 30px;
+}
+
+.mil-mb-60 {
+    margin-bottom: 60px;
+}
+
+.mil-mt-60 {
+    margin-top: 60px;
+}
+
+.mil-mb-90 {
+    margin-bottom: 90px;
+}
+
+.mil-mb-120 {
+    margin-bottom: 120px;
+
+    @media screen and (max-width: 992px) {
+        margin-bottom: 90px;
+    }
+}
+
+
+.mil-mt-suptitle-offset {
+    margin-top: 70px;
+
+    @media screen and (max-width: 992px) {
+        margin-top: 30px;
+    }
+}
+
+.mil-p-120-120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+.mil-p-120-90 {
+    padding-top: 120px;
+    padding-bottom: 90px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 90px;
+        padding-bottom: 60px;
+    }
+}
+
+.mil-p-0-120 {
+    padding-bottom: 120px;
+
+    @media screen and (max-width: 992px) {
+        padding-bottom: 90px;
+    }
+}
+
+.mil-p-120-0 {
+    padding-top: 120px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 90px;
+    }
+}
+
+.mil-p-120-60 {
+    padding-top: 120px;
+    padding-bottom: 60px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+}
+
+.mil-p-90-90 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.mil-p-90-120 {
+    padding-top: 90px;
+    padding-bottom: 120px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+}
+
+.mil-p-0-90 {
+    padding-bottom: 90px;
+
+    @media screen and (max-width: 992px) {
+        padding-bottom: 60px;
+    }
+}
+
+.mil-p-0-30 {
+    padding-bottom: 30px;
+
+    @media screen and (max-width: 992px) {
+        padding-bottom: 0;
+    }
+}
+
+.mil-p-120-30 {
+    padding-top: 120px;
+    padding-bottom: 30px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 90px;
+        padding-bottom: 0;
+    }
+}
+
+.mil-adaptive-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 992px) {
+        justify-content: flex-start;
+    }
+}
+
+.mil-btn-space {
+    margin-right: 30px;
+
+    @media screen and (max-width: 500px) {
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Text */
+
+.mil-text {
+    ul {
+        margin-left: 1em;
+    }
+    p, ul, blockquote, ol, h1, h2, h3, h4, h5, h6, iframe, table, object {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

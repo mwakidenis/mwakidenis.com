@@ -1,0 +1,30 @@
+{
+  "name": "mwakidenis-nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NEXT_DISABLE_SWC=1 next dev",
+    "build": "cross-env NEXT_DISABLE_SWC=1 next build",
+    "start": "cross-env NEXT_DISABLE_SWC=1 next start",
+    "lint": "next lint"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "@next/swc-win32-x64-msvc": "13.4.3",
+    "date-fns": "^2.30.0",
+    "formik": "^2.4.2",
+    "gray-matter": "^4.0.3",
+    "gsap": "^3.11.5",
+    "mwakidenis-nextjs": "file:",
+    "next": "13.4.3",
+    "parallax-js": "^3.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remark": "^14.0.3",
+    "remark-html": "^15.0.2",
+    "sass": "^1.49.7",
+    "swiper": "^9.0.0"
+  }
+}

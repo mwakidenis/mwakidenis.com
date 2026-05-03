@@ -1,0 +1,20 @@
+{
+    "items": [
+        {
+            "image": "/img/partners/1.svg",
+            "alt": "logo"
+        },
+        {
+            "image": "/img/partners/2.svg",
+            "alt": "logo"
+        },
+        {
+            "image": "/img/partners/1.svg",
+            "alt": "logo"
+        },
+        {
+            "image": "/img/partners/2.svg",
+            "alt": "logo"
+        }
+    ]
+}

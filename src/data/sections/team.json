@@ -1,0 +1,122 @@
+{
+    "title": "Meet <br>Our Team",
+    "description": "<p>We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.</p><p>Together, our creative team is committed to delivering impactful work that exceeds expectations.</p>",
+    "subtitle": "<span class=\"mil-thin\">We</span> delivering <br><span class=\"mil-thin\">exceptional</span> results.",
+    "button": {
+        "link": "/team",
+        "label": "Read more"
+    },
+    "note": "<span class=\"mil-accent\">*</span> The founders of our agency",
+    "col1_items": [
+        {
+            "image": "https://res.cloudinary.com/dqv8dlj2s/image/upload/v1772145844/20250810_163412_wrgkmr.jpg",
+            "name": "Mwaki Denis",
+            "role": "Art Director",
+            "social": [
+                {
+                    "icon": "fab fa-behance",
+                    "link": "https://behance.com",
+                    "title": "behance"
+                },
+                {
+                    "icon": "fab fa-dribbble",
+                    "link": "https://dribbble.com",
+                    "title": "dribbble"
+                },
+                {
+                    "icon": "fab fa-twitter",
+                    "link": "https://twitter.com",
+                    "title": "twitter"
+                },
+                {
+                    "icon": "fab fa-github",
+                    "link": "https://github.com",
+                    "title": "github"
+                }
+            ]
+        },
+        {
+            "image": "https://res.cloudinary.com/dqv8dlj2s/image/upload/v1772750502/1760560045314_uunnsg.jpg",
+            "name": "Mwaki Denis",
+            "role": "Frontend Dev",
+            "social": [
+                {
+                    "icon": "fab fa-behance",
+                    "link": "https://behance.com",
+                    "title": "behance"
+                },
+                {
+                    "icon": "fab fa-dribbble",
+                    "link": "https://dribbble.com",
+                    "title": "dribbble"
+                },
+                {
+                    "icon": "fab fa-twitter",
+                    "link": "https://twitter.com",
+                    "title": "twitter"
+                },
+                {
+                    "icon": "fab fa-github",
+                    "link": "https://github.com",
+                    "title": "github"
+                }
+            ]
+        }
+    ],
+    "col2_items": [
+        {
+            "image": "https://res.cloudinary.com/dqv8dlj2s/image/upload/v1772746723/IMG_20251220_111818_dpsecu.jpg",
+            "name": "Mwaki Denis",
+            "role": "Founder",
+            "social": [
+                {
+                    "icon": "fab fa-behance",
+                    "link": "https://behance.com",
+                    "title": "behance"
+                },
+                {
+                    "icon": "fab fa-dribbble",
+                    "link": "https://dribbble.com",
+                    "title": "dribbble"
+                },
+                {
+                    "icon": "fab fa-twitter",
+                    "link": "https://twitter.com",
+                    "title": "twitter"
+                },
+                {
+                    "icon": "fab fa-github",
+                    "link": "https://github.com",
+                    "title": "github"
+                }
+            ]
+        },
+        {
+            "image": "https://res.cloudinary.com/dqv8dlj2s/image/upload/v1772276752/IMG_20251220_111730_cqlgfo.jpg",
+            "name": "Mwaki Denis",
+            "role": "UI/UX Designer",
+            "social": [
+                {
+                    "icon": "fab fa-behance",
+                    "link": "https://behance.com",
+                    "title": "behance"
+                },
+                {
+                    "icon": "fab fa-dribbble",
+                    "link": "https://dribbble.com",
+                    "title": "dribbble"
+                },
+                {
+                    "icon": "fab fa-twitter",
+                    "link": "https://twitter.com",
+                    "title": "twitter"
+                },
+                {
+                    "icon": "fab fa-github",
+                    "link": "https://github.com",
+                    "title": "github"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "title": "Reasonable <span class=\"mil-thin\">prices</span> <br/>for innovative <span class=\"mil-thin\">solutions</span>",
+    "description": "At our agency, we have a unique approach to web design and development. <br/>We believe in creating in terms of user experience, functionality.",
+    "items": [
+        {
+            "title": "Tailored Designs for<br> Every Budget",
+            "text": "Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.",
+            "price": {
+                "value": "19",
+                "symbol": "$"
+            },
+            "link": "/contact"
+        },
+        {
+            "title": "Tailored Designs for<br> Every Budget",
+            "text": "Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.",
+            "price": {
+                "value": "29",
+                "symbol": "$"
+            },
+            "link": "/contact"
+        },
+        {
+            "title": "Unleashing the Beauty of Space <br> with Unique Designs",
+            "text": "Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.",
+            "price": {
+                "value": "49",
+                "symbol": "$"
+            },
+            "link": "/contact"
+        },
+        {
+            "title": "Exquisite Design Concepts <br> for Discerning Clients",
+            "text": "Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.",
+            "price": {
+                "value": "199",
+                "symbol": "$"
+            },
+            "link": "/contact"
+        }
+    ],
+    "button": {
+        "label": "individual solution",
+        "link": "/contact"
+    }
+}

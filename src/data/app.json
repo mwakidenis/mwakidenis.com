@@ -1,0 +1,136 @@
+{
+    "settings": {
+        "siteName": "mwakidenis",
+        "formspreeURL": "https://formspree.io/f/your_api_key",
+        "mailchimp": {
+            "url": "",
+            "key": ""
+        }
+    },
+    "header": {
+        "logo": {
+            "symbol": "mwakidenis co.",
+            "link": "/"
+        },
+        "menu": [
+            {
+                "label": "Homepage",
+                "link": "/",
+                "children": [
+                    {
+                        "label": "Landing Page",
+                        "link": "/"
+                    },
+                    {
+                        "label": "Personal",
+                        "link": "/home-2"
+                    },
+                    {
+                        "label": "Home Slider",
+                        "link": "/projects-3"
+                    }
+                ]
+            },
+            {
+                "label": "Portfolio",
+                "link": "/projects",
+                "children": [
+                    {
+                        "label": "Grid Type 1",
+                        "link": "/projects"
+                    },
+                    {
+                        "label": "Grid Type 2",
+                        "link": "/projects-2"
+                    },
+                    {
+                        "label": "Slider",
+                        "link": "/projects-3"
+                    }
+                ]
+            },
+            {
+                "label": "Services",
+                "link": "/services",
+                "children": [
+                    {
+                        "label": "Services List",
+                        "link": "/services"
+                    },
+                    {
+                        "label": "Single Service",
+                        "link": "/services/service-1"
+                    }
+                ]
+            },
+            {
+                "label": "Blog",
+                "link": "/blog",
+                "children": [
+                    {
+                        "label": "Blog list",
+                        "link": "/blog"
+                    },
+                    {
+                        "label": "Publication",
+                        "link": "/blog/play-to-your-strength-and-supercharge-your-business-4"
+                    }
+                ]
+            },
+            {
+                "label": "Contact",
+                "link": "/contact",
+                "children": 0
+            },
+            {
+                "label": "Other",
+                "link": "/team",
+                "children": [
+                    {
+                        "label": "Team",
+                        "link": "/team"
+                    },
+                    {
+                        "label": "404",
+                        "link": "/404"
+                    }
+                ]
+            }
+        ]
+    },
+    "footer": {
+        "logo": {
+            "text": "mwakidenis."
+        },
+        "copy": "© mwakidenis. All Rights Reserved.",
+        "menu": [
+            { "label": "Nairobi", "link": "/contact#nairobi" },
+            { "label": "Meru", "link": "/contact#meru" },
+            { "label": "Mombasa", "link": "/contact#mombasa" },
+            { "label": "Kisumu", "link": "/contact#kisumu" },
+            { "label": "Nakuru", "link": "/contact#nakuru" }
+        ]
+    },
+    "social": [
+        {
+            "link": "https://behance.net",
+            "icon": "fab fa-behance",
+            "title": "Behance"
+        },
+        {
+            "link": "https://dribbble.com",
+            "icon": "fab fa-dribbble",
+            "title": "Dribbble"
+        },
+        {
+            "link": "https://twitter.com",
+            "icon": "fab fa-twitter",
+            "title": "Twitter"
+        },
+        {
+            "link": "https://github.com",
+            "icon": "fab fa-github",
+            "title": "Github"
+        }
+    ]
+}

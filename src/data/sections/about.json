@@ -1,0 +1,13 @@
+{
+    "image": {
+        "url": "https://res.cloudinary.com/dqv8dlj2s/image/upload/v1772727726/180786857_si1hcr.png",
+        "alt": "img"
+    },
+    "avatar": {
+        "image": "https://res.cloudinary.com/dqv8dlj2s/image/upload/v1772142791/samples/man-portrait.jpg",
+        "alt": "Founder"
+    },
+    "title": "Discover <br/>Our <span class=\"mil-thin\">Studio</span>",
+    "description": "<p>At our design studio, we are a collective of talented individuals ignited by our unwavering passion for transforming ideas into reality. With a harmonious blend of diverse backgrounds and a vast array of skill sets, we join forces to create compelling solutions for our esteemed clients.</p><p>Collaboration is at the heart of what we do. Our team thrives on the synergy that arises when unique perspectives converge, fostering an environment of boundless creativity. By harnessing our collective expertise, we produce extraordinary results that consistently surpass expectations.</p>",
+    "subtitle": "Passionately Creating <span class=\"mil-thin\">Design Wonders:</span> Unleashing <span class=\"mil-thin\">Boundless Creativity</span>"
+}

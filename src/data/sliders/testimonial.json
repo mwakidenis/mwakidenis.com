@@ -1,0 +1,24 @@
+{
+    "title": "Customer <span class=\"mil-thin\">Voices:</span> <br>Hear What <span class=\"mil-thin\">They Say!</span>",
+    "subtitle": "Customer reviews are a valuable source <br>of information for both businesses and consumers.",
+    "items": [
+        {
+            "name": "Paul Trueman",
+            "image": "/img/customers/1.jpg",
+            "role": "Eqanta app",
+            "text": "Working with mwakidenis co. as our UI designer was an absolute pleasure. Their attention to detail and creative approach brought our vision to life. The user interface they designed exceeded our expectations, and we received positive feedback from our clients. Highly recommended!"
+        },
+        {
+            "name": "Olivia Oldman",
+            "image": "/img/customers/2.jpg",
+            "role": "Eqanta app",
+            "text": "I had the opportunity to collaborate with mwakidenis co., and I must say they are incredibly talented. Their ability to understand our brand and translate it into a interface was impressive. mwakidenis co.'s designs were intuitive, and enhanced the overall user experience. I look forward to working with them again!"
+        },
+        {
+            "name": "Oscar Newman",
+            "image": "/img/customers/3.jpg",
+            "role": "Eqanta app",
+            "text": "mwakidenis co. is an exceptional UI designer. They have a keen eye for aesthetics and understand how to create interfaces. mwakidenis co.'s designs greatly improved the usability of our application, and we couldn't be happier with the results. Highly skilled and reliable!"
+        }
+    ]
+}
