@@ -1,4 +1,5 @@
 import Layouts from "@layouts/Layouts";
+import PageBanner from "@components/PageBanner";
 import CallToActionSection from "@components/sections/CallToAction";
 
 const TeamData = [
