@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NEXT_DISABLE_SWC=1 next dev",
-    "build": "cross-env NEXT_DISABLE_SWC=1 next build",
+    "build": "cross-env NEXT_DISABLE_SWC=1 next build && node -e \"const fs=require('fs'); fs.rmSync('.next/cache', { recursive: true, force: true });\"",
     "start": "cross-env NEXT_DISABLE_SWC=1 next start",
     "lint": "next lint"
   },
