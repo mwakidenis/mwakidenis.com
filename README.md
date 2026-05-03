@@ -1,4 +1,4 @@
-# mwakidenis Next.js Template
+# mwakidenis Next.js Portfolio  and  Blog Site
 
 This is a modern **portfolio** built with **Next.js** and **React**, featuring rich animations, interactive components, and Markdown-powered content management. It provides a scalable, performant foundation for creative professionals to showcase their work and publish engaging content.
 
