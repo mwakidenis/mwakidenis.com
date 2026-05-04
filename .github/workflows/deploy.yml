@@ -9,10 +9,40 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      deployments: write              # 👈 REQUIRED to create GitHub deployment
+      deployments: write
     steps:
       - uses: actions/checkout@v4
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          fi
+          
+      - name: Build project
+        run: |
+          if [ -f package.json ] && [ -f "npm run build" ]; then
+            npm run build
+          fi
+          
+      - name: Determine build output directory
+        id: build-dir
+        run: |
+          if [ -d "dist" ]; then
+            echo "dir=dist" >> $GITHUB_OUTPUT
+          elif [ -d "build" ]; then
+            echo "dir=build" >> $GITHUB_OUTPUT
+          elif [ -d "public" ]; then
+            echo "dir=public" >> $GITHUB_OUTPUT
+          else
+            echo "dir=." >> $GITHUB_OUTPUT
+          fi
+          
       - name: Create GitHub Deployment
         uses: actions/github-script@v7
         id: deployment
@@ -28,14 +58,16 @@ jobs:
               description: "Deploying to Cloudflare Pages",
               required_contexts: [],
             });
+            console.log(`Created deployment: ${deployment.id}`);
             return deployment.id;
 
       - name: Deploy to Cloudflare Pages
+        id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=mwakidenis-com --branch=main
+          command: pages deploy ${{ steps.build-dir.outputs.dir }} --project-name=mwakidenis-com --branch=main
 
       - name: Update GitHub Deployment Status (Success)
         if: success()
@@ -43,13 +75,28 @@ jobs:
         with:
           script: |
             const deploymentId = ${{ steps.deployment.outputs.result }};
-            const deploymentUrl = "https://mwakidenis-com.pages.dev/";  
+            const deploymentUrl = "https://mwakidenis-com.pages.dev";
             await github.rest.repos.createDeploymentStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               deployment_id: deploymentId,
               state: "success",
               environment_url: deploymentUrl,
-              log_url: deploymentUrl,
-              description: "Deployed to Cloudflare Pages",
+              log_url: `${deploymentUrl}/_logs`,
+              description: "✅ Successfully deployed to Cloudflare Pages",
+            });
+            console.log(`Updated deployment ${deploymentId} status to success`);
+
+      - name: Update GitHub Deployment Status (Failure)
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deploymentId = ${{ steps.deployment.outputs.result }};
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deploymentId,
+              state: "failure",
+              description: "❌ Deployment failed",
             });
