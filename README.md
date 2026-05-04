@@ -273,7 +273,7 @@ Use provided hooks in `src/common/`:
 - `useClickOutside()` - Detect clicks outside elements
 - `useLocalStorage()` - Manage local storage
 
----
+--- 
 
 ## License
 
@@ -281,4 +281,3 @@ This project is licensed under the [Strict Proprietary License](LICENSE).
 
 ---
 
-Copyright© Aymane Mehdi
