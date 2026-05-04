@@ -26,7 +26,7 @@ jobs:
           
       - name: Build project
         run: |
-          if [ -f package.json ] && [ -f "npm run build" ]; then
+          if [ -f package.json ]; then
             npm run build
           fi
           
@@ -44,8 +44,8 @@ jobs:
           fi
           
       - name: Create GitHub Deployment
-        uses: actions/github-script@v7
         id: deployment
+        uses: actions/github-script@v7
         with:
           script: |
             const { data: deployment } = await github.rest.repos.createDeployment({
@@ -56,7 +56,7 @@ jobs:
               auto_merge: false,
               environment: "production",
               description: "Deploying to Cloudflare Pages",
-              required_contexts: [],
+              required_contexts: []
             });
             console.log(`Created deployment: ${deployment.id}`);
             return deployment.id;
@@ -82,8 +82,8 @@ jobs:
               deployment_id: deploymentId,
               state: "success",
               environment_url: deploymentUrl,
-              log_url: `${deploymentUrl}/_logs`,
-              description: "✅ Successfully deployed to Cloudflare Pages",
+              log_url: deploymentUrl + "/_logs",
+              description: "✅ Successfully deployed to Cloudflare Pages"
             });
             console.log(`Updated deployment ${deploymentId} status to success`);
 
@@ -98,5 +98,5 @@ jobs:
               repo: context.repo.repo,
               deployment_id: deploymentId,
               state: "failure",
-              description: "❌ Deployment failed",
+              description: "❌ Deployment failed"
             });
