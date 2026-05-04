@@ -1,0 +1,42 @@
+name: GitHub Deployment Marker
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  mark-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub deployment record
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const ref = context.sha;
+
+            const deployment = await github.rest.repos.createDeployment({
+              owner,
+              repo,
+              ref,
+              required_contexts: [],
+              auto_merge: false,
+              environment: 'production',
+              transient_environment: false,
+              production_environment: true,
+              description: 'Cloudflare Pages auto-deploy via Git integration'
+            });
+
+            await github.rest.repos.createDeploymentStatus({
+              owner,
+              repo,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              auto_inactive: true,
+              description: 'Deployment handled by Cloudflare Pages Git integration',
+              log_url: `https://github.com/${owner}/${repo}/actions/runs/${context.runId}`,
+            });
