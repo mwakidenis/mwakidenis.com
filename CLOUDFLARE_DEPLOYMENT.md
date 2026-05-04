@@ -30,7 +30,7 @@ npm run build
 
 **Build output directory:**
 ```
-.next/standalone
+out
 ```
 
 **Root directory (leave blank or set to `.`)**
@@ -43,6 +43,8 @@ Add these environment variables in Cloudflare Pages:
 CF_PAGES=1
 NODE_VERSION=18
 ```
+
+This project uses `next.config.js` with `output: 'export'`, so Cloudflare should deploy the generated static `out/` directory.
 
 **Optional** - Add any custom environment variables:
 - `NEXT_PUBLIC_API_URL` - Your API endpoint if using a backend
@@ -92,6 +94,11 @@ View deployment details in Cloudflare Pages:
 3. View build logs, performance metrics, and analytics
 
 ## Troubleshooting
+
+### Deploy should be automatic without API tokens
+- Do not use a GitHub workflow for deploy.
+- Connect the repo in Cloudflare Pages once (Dashboard -> Pages -> Connect to Git).
+- After that, every push to `main` triggers a new Cloudflare deployment automatically.
 
 ### Build Fails with "Cannot find module"
 ```bash
