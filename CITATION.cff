@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: mwakidenis Portfolio and Blog Site
+message: If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+  - given-names: Denis
+    family-names: Mwaki
+    email: mwakidenice@gmail.com
+repository-code: "https://github.com/mwakidenis/mwakidenis.com"
+url: "https://github.com/mwakidenis/mwakidenis.com"
+abstract: A modern portfolio and blog site built with Next.js, React, and GSAP, featuring rich animations, Markdown content management, and a component‑based architecture.
+keywords:
+  - nextjs
+  - react
+  - portfolio
+  - blog
+  - gsap
+license: proprietary
