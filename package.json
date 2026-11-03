@@ -8,10 +8,9 @@
     "start": "cross-env NEXT_DISABLE_SWC=1 next start",
     "lint": "next lint"
   },
-  "devDependencies": {
-    
-  },
+  "devDependencies": {},
   "dependencies": {
+    "@mwakidenis/ai-stream-kit": "^1.0.0",
     "cross-env": "^7.0.3",
     "date-fns": "^2.30.0",
     "formik": "^2.4.2",
